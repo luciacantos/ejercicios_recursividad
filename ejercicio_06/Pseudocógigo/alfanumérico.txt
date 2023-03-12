@@ -1,7 +1,8 @@
 '''
 Ejercicio 6: reconocer un palíndromo
 
-Filtrar el texto oara conservar solo caracteres alfanuméricos
+Filtrar el texto oara conservar solo caracteres alfanuméricos.
+Utiliza el algoritmo alfabético
 '''
 
 Algoritmo alfanumérico(ca: CADENA)
@@ -16,4 +17,11 @@ Realización:
     si ca = CADENA VACÍA entonces
         Resultado <- NULO
     si no
-        si alfabético
+        si alfabético(primero(cadena)) o si no cifra(primero(cadena))
+    entonces
+        Resultadp <- cadena(primero(ca)) ⊕ alfanumérico (fin(ca))
+    si no
+        Resultado <- alfanumérico(fin(ca))
+    fin si
+
+fin alfanumérico
