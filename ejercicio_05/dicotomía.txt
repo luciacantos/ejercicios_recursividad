@@ -1,0 +1,34 @@
+'''
+Pseudocódido del ejercicio 5: búsqueda recursiva por dicotomía en una tabla ordenada
+
+Algoritmo dicotomía: utiliza el algoritmo dicotomía_recursiva para realizarlo, comprueba que ni la tabla ni el elemento
+sean nulos y que esté ordenada ascendentemente o no se podrá ejecutar el algoritmo
+'''
+
+Algortimo dicotomía
+
+ENTRADA
+    tabla: TABLA[T -> COMPARABLE] # tabla para buscar
+    elemento: T  # componente a buscar
+
+RESULTADO:ENTERO  # posición de la celda con el valor del elemetno o AUSENTE
+
+Condición: # comprobar que ni el elemento ni la tabla proporcionados sean nulos
+    elemento ≠ NULO
+    tabla ≠ NULO
+
+
+Realización:
+si tabla[índice_mínimo(tabla)] <= elemento <= tabla[índice_máximo(tabla)] entonces
+    si elemento < tabla[índice_mínimo(tabla)] o t > tabla[índice_máximo(tabla)]   entonces  # elemento no pertenece a la tabla
+        Resultado <- VACÍO
+    si no # el elemento pertenece a la tabla
+        Resultado <- dicotomía_recursiva(tabla, elemento)  # si la tabala está ordenada correctamente se utiliza el algoritmo de búsqueda por dicotomía recursiva
+    fin si
+si no # tabla no ordenada
+    Resultado <- TABLA NO ORDENADA
+fin si
+
+Postcondición:
+    Resultado = VACÍO => índice_válido(tabla, k) => tabla[k] ≠ elemento
+    Resultado ≠ VACÍO => índice_válido(tabla, Resultado) y tabla[Resultado] = elemento
