@@ -1,0 +1,38 @@
+'''
+Pseudocódido del ejercicio 5: búsqueda recursiva por dicotomía en una tabla ordenada
+
+1. Encontar la posición central de la tabla, si está vacía salir de ella
+2. COmparar el valor de la posición media con el elemento buscado
+3. Si el valor es igual, se devuelve la posición; de lo contrario ir repitiendo el procedimiento en la mitad relevante de la tabla
+'''
+
+Algoritmo dicotómia_recursiva  # devuelve la posición con el valor del elemento o VACÍO
+
+ENTRADA
+    tabla_ordenada: TABLA[T -> COMPARABLE]  # la tabla ordenada donde se busca el valor del elemento
+    elemento: T # componente a buscar
+
+RESULTADO: ENTERO # posiciOn del elemento o VACÍO
+
+Variables:
+    i, j, n: ENTERO
+
+Inicialización:
+    i <- íncice_mínimo(tabla_ordenada)
+    j <- índice_máximo(tabla_ordenada)
+
+Realización:
+    si j < i entonces  # La tabla tiene que estar ordenada ascendentemente
+        Resultado <- VACÍO
+    si no n <- (i + j) / 2  # encontrar la posición central de la tabla ('n' va a ser la posición en la tabla)
+        si tabla_ordenada[n] = elemento entonces
+            Resultado <- n  # el elemento coincide con la valor en dicha posición
+        si no
+            si tabla_ordenada[n] > elemento entonces
+                Resultado <- dicotómia_recursiva(sub_tabla(tabla_ordenada, n+1, j), elemento)  # divides la tabla en otra tabla reduciéndola a la mitad superior
+            si no
+                Resultado <- dicotómia_recursiva(sub_tabla(tabla_ordenada, i, n-1), elemento)  # divides la tabla en otra tabla reduciéncola a la mitad inferior
+            fin si
+        fin si
+    fin Si
+fin dictómica_recursiva
