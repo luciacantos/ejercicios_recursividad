@@ -1,0 +1,15 @@
+'''
+Ejercicio 6: reconocer un palíndromo
+
+Filtrar el texto oara conservar solo caracteres alfanuméricos
+'''
+
+Algoritmo alfanumérico(ca: CADENA)
+
+ENTRADA: CADENA
+SALIDA: CADENA
+
+Precondición:
+    ca ≠  NULO
+
+    
