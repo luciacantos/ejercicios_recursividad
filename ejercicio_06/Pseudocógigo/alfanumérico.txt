@@ -12,4 +12,8 @@ SALIDA: CADENA
 Precondición:
     ca ≠  NULO
 
-    
+Realización:
+    si ca = CADENA VACÍA entonces
+        Resultado <- NULO
+    si no
+        si alfabético
