@@ -1,0 +1,15 @@
+'''
+Ejercicio 6: reconocer un palíndromo
+
+Filtar el texto para que solo sean valores del alfabeto
+'''
+
+Algoritmo es_alfabético(car: CARACTER): BOOLEANO
+
+Condición
+    car ≠ NULO
+
+Realización:
+    Resultado <- minúscula(car) o si no mayúscula(car)
+
+fin alfabético

@@ -1,0 +1,23 @@
+'''
+ejercicio 6
+
+filtrar las mayuúsculas y minúsculas
+'''
+
+Algoritmo mayúsculas(ca: CADENA)
+
+Precondición:
+ ca ≠ NULO
+
+Realización:
+    si ca = CADENA VACÍA entonces
+        Resultado <- CADENA vacía
+    si no
+        Resultado <- cadena(mayúsculas(primero(ca))) ⊕ mayúsculas(fin(ca))
+
+Postcondición:
+    ca = CADENA VACÍA => Resultado = CADENA VACÍA
+
+    ca ≠ CADENA VACÍA => Resultado = cadena(mayúsculas(primero(ca))) ⊕ mayuúsculas(fin(ca))
+
+fin mayúsculas
