@@ -1,6 +1,7 @@
 '''
 Pseudocódido del ejercicio 5: búsqueda recursiva por dicotomía en una tabla ordenada
 
+Algoritmo de la búsqueda por dicotomía recuersiva:
 1. Encontar la posición central de la tabla, si está vacía salir de ella
 2. COmparar el valor de la posición media con el elemento buscado
 3. Si el valor es igual, se devuelve la posición; de lo contrario ir repitiendo el procedimiento en la mitad relevante de la tabla
