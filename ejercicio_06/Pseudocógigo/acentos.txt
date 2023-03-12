@@ -1,0 +1,27 @@
+'''
+ejercicio 6
+
+cambiar los caracteres con acentos por los mismos sin ellos
+'''
+
+Algoritmo acentos(ca:CADENA)
+
+Precondición:
+    ca ≠ NULO
+    mayúsculas(ca) = ca
+
+Realización
+    Si ca = CADENA VACÍA  entonces
+        Resultado <- CADENA VACÍA
+    si no
+        si situación(primero(ca),mayúsculas_acentuadas) ≠ AUSENTE entonces
+            Resultado <- cadena(mayúsulas, situación(primero(ca))) ⊕ sin acento(fin(ca))
+        si no
+            Resultado <- primero(ca) ⊕ sin acento(fin(ca))
+        fin Si
+
+POstcondicion:
+    ca = CADENA VACÍA => Resultado <- CADENA VACÍA
+    ca ≠ CADENA VACIA => Resultado <- 'ca' sin acento
+
+fin acentos
