@@ -8,3 +8,12 @@ Pseudocódido del ejercicio 5: búsqueda recursiva por dicotomía en una tabla o
 
 Algoritmo búsqueda_dictómica_recursiva  # devuelve la posición con el valor del elemento o VACÍO
 
+ENTRADA
+    tabla_ordenada: TABLA[T -> COMPARABLE]  # la tabla ordenada donde se busca el valor del elemento
+    elemento: T # componente a buscar
+
+RESULTADO: ENTERO # posiciOn del elemento o VACÍO
+
+Variables:
+    i, j, n: ENTERO
+    
