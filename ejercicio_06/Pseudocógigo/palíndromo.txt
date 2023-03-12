@@ -1,0 +1,22 @@
+'''
+ejercicio 6
+
+Filtrar para saber si es un palíndromo utilizando los demás algoritmos
+'''
+
+Algortmo(frase:CADENA)
+
+Precondición:
+    frase ≠ NULO
+
+Variable:
+    ca: CADENA
+
+Realización:
+    ca <- alfanumérico(frase)  # solo mantener caracteres alfanuméricos
+    ca <- mayúsculas # sustitutir los caracteres alfanumericos en su mayúsvula equivalente
+    ca <- acentos # sustituir los caracteres acentuados en sus equivalentes sin acentos
+
+    Resultado <- (ca = inverso(ca)) # ver si tiene carácter de espejo y es un palíndromo
+
+    fin palindromo
