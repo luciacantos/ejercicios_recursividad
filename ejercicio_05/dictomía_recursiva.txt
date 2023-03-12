@@ -23,17 +23,18 @@ Inicialización:
     j <- índice_máximo(tabla_ordenada)
 
 Realización:
-    si j < i entonces  # La tabla tiene que estar ordenada ascendentemente
-        Resultado <- VACÍO
-    si no n <- (i + j) / 2  # encontrar la posición central de la tabla ('n' va a ser la posición en la tabla)
-        si tabla_ordenada[n] = elemento entonces
-            Resultado <- n  # el elemento coincide con la valor en dicha posición
+    longitud = longitud tabla_ordenada
+    n = longitud / 2
+
+    si tabla_ordenada[n] = elemento entonces
+        Resultado <- n  # el elemento coincide con la valor en dicha posición
+    si no
+        si tabla_ordenada[n] > elemento entonces
+            Resultado <- dicotómia_recursiva(sub_tabla(tabla_ordenada, n+1, j), elemento)  # divides la tabla en otra tabla reduciéndola a la mitad superior
         si no
-            si tabla_ordenada[n] > elemento entonces
-                Resultado <- dicotómia_recursiva(sub_tabla(tabla_ordenada, n+1, j), elemento)  # divides la tabla en otra tabla reduciéndola a la mitad superior
-            si no
-                Resultado <- dicotómia_recursiva(sub_tabla(tabla_ordenada, i, n-1), elemento)  # divides la tabla en otra tabla reduciéncola a la mitad inferior
-            fin si
+            Resultado <- dicotómia_recursiva(sub_tabla(tabla_ordenada, i, n-1), elemento)  # divides la tabla en otra tabla reduciéncola a la mitad inferior
         fin si
-    fin Si
+    fin si
+
 fin dictómica_recursiva
+
